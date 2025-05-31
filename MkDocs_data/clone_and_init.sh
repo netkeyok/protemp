@@ -22,7 +22,7 @@ else
 fi
 
 # Перемещаем py_gitignore в корень, под названием .gitignore
-if [ -f "py_gitignore" ]; then
+if [ -f "MkDocs_data/py_gitignore" ]; then
     mv MkDocs_data/py_gitignore .gitignore
 #    cp MkDocs_data/README.md README.md
 else
