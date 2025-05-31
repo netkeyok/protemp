@@ -97,6 +97,13 @@ flake8 .
 clone_and_init.bat <имя-проекта>       # Windows
 ```
 
+### Скачать скрипты отдельно:
+
+- **Linux/macOS**: [clone_and_init.sh](https://raw.githubusercontent.com/netkeyok/protemp/refs/heads/main/clone_and_init.sh)
+- **Windows**: [clone_and_init.bat](https://raw.githubusercontent.com/netkeyok/protemp/refs/heads/main/clone_and_init.bat)
+
+### Что делают скрипты:
+
 - Клонируют шаблон
 - Удаляют старую `.git`-историю
 - Создают чистый проект с новой инициализацией Git
