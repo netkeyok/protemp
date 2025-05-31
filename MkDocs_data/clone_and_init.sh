@@ -10,22 +10,23 @@ git clone "$REPO" "$TARGET"
 cd "$TARGET"
 rm -rf .git
 
-# Перемещаем README.md и doc_requirements.txt в MkDocs_data
+# Перемещаем README.md в MkDocs_data
 if [ -f "README.md" ]; then
     mv README.md MkDocs_data/README.md
-#    cp MkDocs_data/README.md README.md
 else
     echo "⚠️ README.md не найден"
 fi
 
-if [ -f "doc_requirements.txt" ]; then
-    mv doc_requirements.txt MkDocs_data/doc_requirements.txt
+# Перемещаем py_gitignore в корень из MkDocs_data, под названием .gitignore
+if [ -f "MkDocs_data/py_gitignore" ]; then
+    mv MkDocs_data/py_gitignore .gitignore
+    # Добавляем MkDocs_data/ в .gitignore
+    echo "MkDocs_data/" >> .gitignore
 else
-    echo "⚠️ doc_requirements.txt не найден"
+    echo "⚠️ py_gitignore не найден"
+    # Создаем .gitignore с MkDocs_data/ если py_gitignore не найден
+    echo "MkDocs_data/" > .gitignore
 fi
-
-# Добавляем MkDocs_data/ в .gitignore
-echo "MkDocs_data/" >> .gitignore
 
 git init
 git add .
