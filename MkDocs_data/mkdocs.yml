@@ -1,0 +1,21 @@
+site_name: ProTemp Documentation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Reference: reference.md
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+  - autorefs
+  - mermaid2
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - toc:
+      permalink: true
+docs_dir: MkDocs_data/docs
+site_dir: MkDocs_data/site
