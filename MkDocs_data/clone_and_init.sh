@@ -18,15 +18,7 @@ else
 fi
 
 # Перемещаем py_gitignore в корень из MkDocs_data, под названием .gitignore
-if [ -f "MkDocs_data/py_gitignore" ]; then
-    mv MkDocs_data/py_gitignore .gitignore
-    # Добавляем MkDocs_data/ в .gitignore
-    echo "MkDocs_data/" >> .gitignore
-else
-    echo "⚠️ py_gitignore не найден"
-    # Создаем .gitignore с MkDocs_data/ если py_gitignore не найден
-    echo "MkDocs_data/" > .gitignore
-fi
+mv MkDocs_data/py_gitignore .gitignore
 
 git init
 git add .
