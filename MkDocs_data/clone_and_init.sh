@@ -32,6 +32,7 @@ git init
 git add .
 python3 -m venv .venv
 source .venv/bin/activate
+pip install --upgrade pip
 pip install -r MkDocs_data/doc_requirements.txt
 git commit -m "Initial commit from template"
 echo "✅ Новый проект создан в '$TARGET'"
