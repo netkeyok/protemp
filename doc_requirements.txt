@@ -1,7 +1,0 @@
-mkdocs
-mkdocs-material
-mkdocstrings[python]
-mkdocs-mermaid2-plugin
-pymdown-extensions
-black
-flake8
