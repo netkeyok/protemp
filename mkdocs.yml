@@ -1,4 +1,4 @@
-site_name: Project Documentation
+site_name: ProTemp Documentation
 theme:
   name: material
 nav:
@@ -17,4 +17,5 @@ markdown_extensions:
   - pymdownx.tasklist
   - toc:
       permalink: true
-docs_dir: docs
+docs_dir: MkDocs_data/docs
+site_dir: MkDocs_data/site
