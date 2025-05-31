@@ -13,6 +13,14 @@ rm -rf .git
 # Добавляем MkDocs_data/ в .gitignore
 echo "MkDocs_data/" >> .gitignore
 
+# Перемещаем README.md в MkDocs_data
+if [ -f "README.md" ]; then
+    mv README.md MkDocs_data/README.md
+#    cp MkDocs_data/README.md README.md
+else
+    echo "⚠️ README.md не найден"
+fi
+
 git init
 git add .
 python3 -m venv .venv
